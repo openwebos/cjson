@@ -1,0 +1,29 @@
+# Copyright (c) 2012 Hewlett-Packard Development Company, L.P.
+#
+# This library is free software; you can redistribute it and/or modify
+# it under the terms of the MIT license. See COPYING for details.
+#
+/BUILD*
+Makefile
+Makefile.in
+aclocal.m4
+autom4te.cache
+cjson.pc
+config.h
+config.h.in
+config.guess
+config.log
+config.status
+config.sub
+configure
+depcomp
+.deps
+/doc
+install-sh
+.libs
+ltmain.sh
+*libtool
+/m4
+missing
+/patches
+stamp-h1

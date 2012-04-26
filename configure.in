@@ -1,0 +1,44 @@
+# Use of this file is subject to license terms as set forth in the file COPYING found in this directory.
+
+# Process this file with autoconf to produce a configure script.
+
+AC_PREREQ([2.61])
+
+# Based on version 0.8 of json-c. (The version of cjson is always one major
+# version greater than that of the json-c version upon which it is based.)
+AC_INIT([cjson], [1.8.0])
+
+# Set the "foreign" option so that we don't have to have a NEWS file and
+# can have README.md instead of README.
+AM_INIT_AUTOMAKE([foreign])
+AC_CONFIG_MACRO_DIR([m4])
+
+# Checks for programs.
+
+# Checks for libraries.
+
+# Checks for header files.
+AC_CONFIG_HEADERS([config.h])
+AC_HEADER_STDC
+AC_CHECK_HEADERS(fcntl.h limits.h strings.h syslog.h unistd.h [sys/param.h] stdarg.h)
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+AC_TYPE_SIZE_T
+
+# Checks for library functions.
+AC_FUNC_VPRINTF
+AC_FUNC_MEMCMP
+AC_FUNC_MALLOC
+AC_FUNC_REALLOC
+AC_CHECK_FUNCS(strndup strerror vsnprintf vasprintf open vsyslog strncasecmp)
+
+AC_PROG_LIBTOOL
+
+# Argument to libtool -version-number option
+AC_SUBST([CJSON_VERSION_NUMBER], m4_translit(AC_PACKAGE_VERSION, [.], [:]))
+
+AC_OUTPUT([
+Makefile
+cjson.pc
+])

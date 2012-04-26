@@ -1,0 +1,13 @@
+# Use of this file is subject to license terms as set forth in the file COPYING found at https://github.com/openwebos/cjson/blob/master/COPYING
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: cjson
+Description: JSON implementation in C
+Version: @VERSION@
+Requires: 
+Libs:  -L${libdir} -lcjson
+Cflags: -I${includedir}
