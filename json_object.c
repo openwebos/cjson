@@ -33,7 +33,7 @@
 // #define REFCOUNT_DEBUG 1
 
 char *json_number_chars = "0123456789.+-eE";
-char *json_hex_chars = "0123456789abcdef";
+char *json_hex_chars = "0123456789abcdefABCDEF";
 
 #ifdef REFCOUNT_DEBUG
 static char* json_type_name[] = {
